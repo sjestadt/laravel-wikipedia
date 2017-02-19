@@ -1,12 +1,12 @@
 <?php
 
-namespace Unicodeveloper\Larapedia;
+namespace sjestadt\Larapedia;
 
-use Unicodeveloper\Larapedia\Exception\EmptyArticleException;
-use Unicodeveloper\Larapedia\Exception\EngineNotSupportedException;
-use Unicodeveloper\Larapedia\Exception\LanguageNotSupportedException;
+use sjestadt\Larapedia\Exception\EmptyArticleException;
+use sjestadt\Larapedia\Exception\EngineNotSupportedException;
+use sjestadt\Larapedia\Exception\LanguageNotSupportedException;
 
-class WikiRand
+class Wiki
 {
     /**
      * Language Supported
@@ -48,7 +48,7 @@ class WikiRand
     private $article_ids = [];
 
     /**
-     * WikiRand Constructor
+     * Wiki Constructor
      * @param string  $language
      * @param integer $number
      * @param string  $engine

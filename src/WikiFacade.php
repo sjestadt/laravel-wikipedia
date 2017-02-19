@@ -1,10 +1,10 @@
 <?php
 
-namespace Unicodeveloper\Larapedia;
+namespace sjestadt\Larapedia;
 
 use Illuminate\Support\Facades\Facade;
 
-class WikiRandFacade extends Facade
+class WikiFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -13,6 +13,6 @@ class WikiRandFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'wikirand';
+        return 'wiki';
     }
 }

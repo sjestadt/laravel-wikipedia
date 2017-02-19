@@ -1,12 +1,5 @@
 # laravel-wikipedia
 
-[![Latest Stable Version](https://poser.pugx.org/unicodeveloper/laravel-wikipedia/v/stable.svg)](https://packagist.org/packages/unicodeveloper/laravel-wikipedia)
-![](https://img.shields.io/badge/unicodeveloper-approved-brightgreen.svg)
-[![License](https://poser.pugx.org/unicodeveloper/laravel-wikipedia/license.svg)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/unicodeveloper/laravel-wikipedia.svg)](https://travis-ci.org/unicodeveloper/laravel-wikipedia)
-[![Build Status](https://img.shields.io/travis/andela-kerinoso/laravel-wikipedia.svg)](https://travis-ci.org/andela-kerinoso/laravel-wikipedia)
-[![Quality Score](https://img.shields.io/scrutinizer/g/unicodeveloper/laravel-wikipedia.svg?style=flat-square)](https://scrutinizer-ci.com/g/unicodeveloper/laravel-wikipedia)
-[![Total Downloads](https://img.shields.io/packagist/dt/unicodeveloper/laravel-wikipedia.svg?style=flat-square)](https://packagist.org/packages/unicodeveloper/laravel-wikipedia)
 
 > Laravel Package to work with Wikipedia. Very easy to use. Offers the use of Facades and Dependency Injection
 
@@ -17,13 +10,13 @@
 First, pull in the package through Composer.
 
 ``` bash
-$ composer require unicodeveloper/laravel-wikipedia
+$ composer require sjestadt/laravel-wikipedia
 ```
 
 Another alternative is to simply add the following line to the require block of your `composer.json` file.
 
 ```
-"unicodeveloper/laravel-wikipedia": "1.0.*"
+"sjestadt/laravel-wikipedia": "1.0.*"
 ```
 
 Then run `composer install` or `composer update` to download it and have the autoloader updated.
@@ -33,7 +26,7 @@ And then include these service providers within `config/app.php`
 ```php
 'providers' => [
     ...
-    Unicodeveloper\Larapedia\WikiRandServiceProvider::class,
+    sjestadt\Larapedia\WikiServiceProvider::class,
     ...
 ];
 ```
@@ -43,12 +36,12 @@ This package also comes with a Facade
 ```php
 'aliases' => [
     ...
-    'WikiRand' => Unicodeveloper\Larapedia\WikiRandFacade::class,
+    'Wiki' => sjestadt\Larapedia\WikiFacade::class,
     ...
 ]
 ```
 
-Run the following command, it creates a `config/wikirand.php` in your laravel app. You can modify the configuration
+Run the following command, it creates a `config/wiki.php` in your laravel app. You can modify the configuration
 
 ```php
     php artisan vendor:publish
@@ -62,19 +55,19 @@ For those that love Facades immensely, I have provided the cake for you :smile: 
 
 ``` php
 
-{{ WikiRand::getFirstSentence() }}  // returns 5321 Jagras è un asteroide della fascia principale.
+{{ Wiki::getFirstSentence() }}  // returns 5321 Jagras è un asteroide della fascia principale.
 
-{{ WikiRand::getApiLanguage() }} // returns it
+{{ Wiki::getApiLanguage() }} // returns it
 
-{{ WikiRand::getId() }} // returns 812464
+{{ Wiki::getId() }} // returns 812464
 
-{{ WikiRand::getTitle() }} // returns 5321 Jagras
+{{ Wiki::getTitle() }} // returns 5321 Jagras
 
-{{ WikiRand::getLink() }} // returns http://it.wikipedia.org/wiki/5321_Jagras
+{{ Wiki::getLink() }} // returns http://it.wikipedia.org/wiki/5321_Jagras
 
-{{ WikiRand::getNChar(25) }} // 5321 Jagras è un asteroide...
+{{ Wiki::getNChar(25) }} // 5321 Jagras è un asteroide...
 
-{{ WikiRand::getCategoriesRelated() }}
+{{ Wiki::getCategoriesRelated() }}
 // returns
 array(3) {
       [0]=> string(42) "Asteroidi della fascia principale centrale"
@@ -82,7 +75,7 @@ array(3) {
       [2]=> string(16) "Stub - asteroidi"
 }
 
-{{ WikiRand::getOtherLangLinks() }}
+{{ Wiki::getOtherLangLinks() }}
 // returns
 array(10)
       { [0]=> array(3)
@@ -127,11 +120,11 @@ array(10)
         }
 }
 
-{{ WikiRand::getPlainTextArticle() }}
+{{ Wiki::getPlainTextArticle() }}
 // returns
 5321 Jagras è un asteroide della fascia principale. Scoperto nel 1985, presenta un'orbita caratterizzata da un semiasse maggiore pari a 2,5810209 UA e da un'eccentricità di 0,2213576, inclinata di 13,58746° rispetto all'eclittica. Collegamenti esterni (EN) Jagras - Dati riportati nel database dell'IAU Minor Planet Center (EN) Jagras - Dati riportati nel Jet Propulsion Laboratory - Small-Body Database
 
-{{ WikiRand::getArticleImages() }}
+{{ Wiki::getArticleImages() }}
 // returns
 array(2) {
       [0]=> string(63) "http://upload.wikimedia.org/wikipedia/commons/8/83/Celestia.png"
@@ -160,7 +153,7 @@ composer test
 
 ## Inspiration
 
- * [WikiRandom](https://github.com/ihoru/WikiRandom)
+ * [Wiki](https://github.com/ihoru/Wiki)
 
 ## Contributing
 
@@ -170,7 +163,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 Why not star the github repo? I'd love the attention! Why not share the link for this repository on Twitter or HackerNews? Spread the word!
 
-Don't forget to [follow me on twitter](https://twitter.com/unicodeveloper)!
+Don't forget to [follow me on twitter](https://twitter.com/sjestadt)!
 
 Thanks!
 Prosper Otemuyiwa.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Unicodeveloper\Larapedia\Exception;
+namespace sjestadt\Larapedia\Exception;
 
 use Exception;
 

@@ -1,20 +1,20 @@
 {
-    "name": "unicodeveloper/laravel-wikipedia",
+    "name": "sjestadt/laravel-wikipedia",
     "description": "Laravel 5 Bridge for Wikipedia",
     "keywords": [
-        "unicodeveloper",
+        "sjestadt",
         "laravel-wikipedia",
         "laravel",
         "wikipedia",
         "php"
     ],
-    "homepage": "https://twitter.com/unicodeveloper",
+    "homepage": "https://twitter.com/sjestadt",
     "license": "MIT",
     "authors": [
         {
-            "name": "unicodeveloper",
+            "name": "sjestadt",
             "email": "prosperotemuyiwa@gmail.com",
-            "homepage": "https://twitter.com/unicodeveloper",
+            "homepage": "https://twitter.com/sjestadt",
             "role": "Developer"
         }
     ],
@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Unicodeveloper\\Larapedia\\": "src"
+            "sjestadt\\Larapedia\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Unicodeveloper\\Larapedia\\Test\\": "tests"
+            "sjestadt\\Larapedia\\Test\\": "tests"
         }
     },
     "scripts": {

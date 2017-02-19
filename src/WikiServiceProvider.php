@@ -1,10 +1,10 @@
 <?php
 
-namespace Unicodeveloper\Larapedia;
+namespace sjestadt\Larapedia;
 
 use Illuminate\Support\ServiceProvider;
 
-class WikiRandServiceProvider extends ServiceProvider
+class WikiServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
@@ -19,10 +19,10 @@ class WikiRandServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $config = realpath(__DIR__.'/../resources/config/wikirand.php');
+        $config = realpath(__DIR__.'/../resources/config/wiki.php');
 
         $this->publishes([
-            $config => config_path('wikirand.php')
+            $config => config_path('wiki.php')
         ]);
     }
 
@@ -32,8 +32,8 @@ class WikiRandServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('wikirand', function(){
-            return new WikiRand(config('wikirand'));
+        $this->app->bind('wiki', function(){
+            return new Wiki(config('wiki'));
         });
     }
 
@@ -43,6 +43,6 @@ class WikiRandServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return ['wikirand'];
+        return ['wiki'];
     }
 }
